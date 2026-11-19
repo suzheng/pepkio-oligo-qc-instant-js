@@ -2,6 +2,7 @@
   "name": "pepkio-oligo-qc-instant",
   "version": "0.1.0",
   "description": "Batch primer quality checker with GC%, multi-method Tm, hairpin and dimer flags, and exportable QC tables via the Pepkio Tools REST API.",
+  "readme": "README_NPM.md",
   "type": "module",
   "engines": {
     "node": ">=18"
@@ -20,6 +21,7 @@
   "files": [
     "dist",
     "README.md",
+    "README_NPM.md",
     "LICENSE"
   ],
   "scripts": {
