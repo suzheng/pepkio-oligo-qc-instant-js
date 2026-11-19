@@ -1,0 +1,73 @@
+{
+  "name": "pepkio-oligo-qc-instant",
+  "version": "0.1.0",
+  "description": "Batch primer quality checker with GC%, multi-method Tm, hairpin and dimer flags, and exportable QC tables via the Pepkio Tools REST API.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "pepkio-oligo-qc-instant": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --exclude '**/integration.test.ts'",
+    "test:integration": "vitest run integration.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepkio/pepkio-oligo-qc-instant-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pepkio/pepkio-oligo-qc-instant-js/issues"
+  },
+  "homepage": "https://www.pepkio.com/tools/oligo-qc-instant",
+  "keywords": [
+    "oligo-qc-instant",
+    "pcr",
+    "primer",
+    "oligo",
+    "qc",
+    "melting-temperature",
+    "tm",
+    "hairpin",
+    "dimer",
+    "molecular-biology",
+    "bioinformatics",
+    "pepkio",
+    "typescript",
+    "node",
+    "rest-api"
+  ],
+  "author": "Pepkio Team",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "commander": "^15.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.1"
+  }
+}
